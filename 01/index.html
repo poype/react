@@ -13,8 +13,15 @@
     <script src="../node_modules/react-dom/umd/react-dom.development.js"></script>
 
     <script>
+        // 创建react元素
+        // 参数一：元素名称
+        // 参数二：元素属性
+        // 参数三：元素的子节点
         const title = React.createElement('h1', null, 'Hello React')
 
+        // 渲染react元素
+        // 参数一：被渲染的元素
+        // 参数二：挂载点
         ReactDOM.render(title, document.getElementById("root"))
     </script>
 </body>
