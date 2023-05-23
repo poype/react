@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// 导入css文件
+import './index.css'
 
 const title = React.createElement('h1', null, 'Hello React脚手架!!!')
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -69,4 +71,13 @@ const page2 = (
     </div>
 )
 
-root.render(page2);
+// JSX样式
+const page3 = (
+    <div>
+        {/* style接受一个JavaScript对象 */}
+        <h1 style={{color: "red", backgroundColor: "yellow"}}>行内样式</h1>
+        <h1 className='title'>类名样式</h1>
+    </div>
+)
+
+root.render(page3);
