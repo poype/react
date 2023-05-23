@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom/client';
 // 导入css文件
 import './index.css'
 
+// 导入函数式组件
+import FuncComponent from './component/Func'
+
 const title = React.createElement('h1', null, 'Hello React脚手架!!!')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -77,6 +80,8 @@ const page3 = (
         {/* style接受一个JavaScript对象 */}
         <h1 style={{color: "red", backgroundColor: "yellow"}}>行内样式</h1>
         <h1 className='title'>类名样式</h1>
+        {/* 使用函数组件 */}
+        <FuncComponent></FuncComponent>
     </div>
 )
 
