@@ -5,6 +5,8 @@ import './index.css'
 
 // 导入函数式组件
 import FuncComponent from './component/Func'
+// 导入类组件
+import ClassComponent from './component/Class'
 
 const title = React.createElement('h1', null, 'Hello React脚手架!!!')
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -82,6 +84,8 @@ const page3 = (
         <h1 className='title'>类名样式</h1>
         {/* 使用函数组件 */}
         <FuncComponent></FuncComponent>
+        {/* 使用类组件 */}
+        <ClassComponent></ClassComponent>
     </div>
 )
 

@@ -6,7 +6,7 @@ import './Func.css'
 // 2. 函数必须有返回值
 function FuncComponent() {
     return (
-        <div>这是一个函数组件</div>
+        <div className='func'>这是一个函数组件</div>
     )
 }
 
