@@ -6,8 +6,19 @@ import React from "react";
 // 3. 必须包含render方法
 class ClassComponent extends React.Component {
 
+    handleClick(e) {
+        console.log("按钮被点击了！！！！！")
+        console.log(e)  // 事件对象
+        e.preventDefault()
+    }
+
     render() {
-        return <div>这是一个类组件~~~~~</div>
+        return (
+            <div>
+                <p>这是一个类组件~~~~~</p>
+                <button onClick={this.handleClick}>点击按钮</button>
+            </div>
+        )
     }
 }
 
