@@ -52,4 +52,21 @@ const page1 = (
     </div>
 )
 
-root.render(page1);
+
+// 渲染列表
+let songList = [
+    {id: 1, name: "痴心绝对"},
+    {id: 2, name: "南山南"},
+    {id: 3, name: "花海"}
+];
+
+const page2 = (
+    <div>
+        <ul>
+            {/* key只是在react内部使用的，在dom中看不到key的值 */}
+            {songList.map(item => <li key={item.id}>{item.name}</li>)}
+        </ul>
+    </div>
+)
+
+root.render(page2);
