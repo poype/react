@@ -30,4 +30,26 @@ const jsx = (
     </h1>
 );
 
-root.render(jsx);
+
+// 条件渲染
+let isLoading = false
+
+// 1. 使用函数返回不同的元素
+function loadData() {
+    if(isLoading) {
+        return <div>正在加载数据</div>
+    }
+    return <div>数据加载完成</div>
+}
+
+const page1 = (
+    <div>
+        {loadData()}
+        {/* 2.用条件表达式 */}
+        <p>{isLoading ? "data is loading" : "data loading complete"}</p>
+        {/* 3.要么显示，要不什么都不显示 */}
+        <p>{isLoading && "data is loading ~~~~"}</p>
+    </div>
+)
+
+root.render(page1);
