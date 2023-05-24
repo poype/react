@@ -1,4 +1,5 @@
 import React from "react";
+import Person from "./Person"
 
 // 类组件
 // 1. 类名必须以大写字母开头
@@ -72,6 +73,9 @@ class ClassComponent extends React.Component {
                 {/* checkbox要取事件中的checked属性值 */}
                 <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
                 <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
+
+                {/* 通过props传递数据给组件 */}
+                <Person name="Jack" age="22"/>
             </div>
         )
     }
