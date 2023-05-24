@@ -15,7 +15,8 @@ class ClassComponent extends React.Component {
             count: 0,
             txt: "",
             city: "",
-            isCheck: false
+            isCheck: false,
+            childMsg: ""
         }
     }
 
@@ -32,6 +33,13 @@ class ClassComponent extends React.Component {
         // 只有调用setState函数更新state对象才能让页面更新
         this.setState({
             count: this.state.count + 1
+        })
+    }
+
+    getMsgFromChild(message) {
+        console.log("从父组件收到：" + message)
+        this.setState({
+            childMsg: message
         })
     }
 
@@ -75,7 +83,9 @@ class ClassComponent extends React.Component {
                 <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
 
                 {/* 通过props传递数据给组件 */}
-                <Person name="Jack" age="22"/>
+                <Person name="Jack" age="22" sendMsg={(msg) => this.getMsgFromChild(msg)} />
+
+                <p>{this.state.childMsg}</p>
             </div>
         )
     }
