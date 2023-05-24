@@ -12,7 +12,9 @@ class ClassComponent extends React.Component {
         // 初始化state对象
         this.state = {
             count: 0,
-            txt: ""
+            txt: "",
+            city: "",
+            isCheck: false
         }
     }
 
@@ -44,6 +46,32 @@ class ClassComponent extends React.Component {
                 {/* 下面两个input的value可以实时保持相同 */}
                 <input type="text" value={this.state.txt} onChange={(e) => this.setState({txt: e.target.value})} />
                 <input type="text" value={this.state.txt} onChange={(e) => this.setState({txt: e.target.value})} />
+
+                <br/><br/>
+
+                <textarea value={this.state.content} onChange={(e) => {this.setState({content: e.target.value})}} />
+                <textarea value={this.state.content} onChange={(e) => {this.setState({content: e.target.value})}} />
+
+                <br/><br/>
+
+                <select value={this.state.city} onChange={(e) => this.setState({city: e.target.value})}>
+                    <option value="sh">上海</option>
+                    <option value="bj">北京</option>
+                    <option value="gz">广州</option>
+                    <option value="sz">深圳</option>
+                </select>
+
+                <select value={this.state.city} onChange={(e) => this.setState({city: e.target.value})}>
+                    <option value="sh">上海</option>
+                    <option value="bj">北京</option>
+                    <option value="gz">广州</option>
+                    <option value="sz">深圳</option>
+                </select>
+
+                <br/><br/>
+                {/* checkbox要取事件中的checked属性值 */}
+                <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
+                <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
             </div>
         )
     }
