@@ -11,7 +11,8 @@ class ClassComponent extends React.Component {
 
         // 初始化state对象
         this.state = {
-            count: 0
+            count: 0,
+            txt: ""
         }
     }
 
@@ -32,12 +33,17 @@ class ClassComponent extends React.Component {
     }
 
     render() {
+        console.log("render~~~~~~~~~~~~~~~~~~~~")
         return (
             <div>
                 <p>这是一个类组件~~~~~</p>
                 <p>计数： {this.state.count} </p>
                 <button onClick={() => this.handleClick1()}>按钮111</button>
                 <button onClick={() => this.handleClick2()}>按钮222</button>
+                <br/><br/>
+                {/* 下面两个input的value可以实时保持相同 */}
+                <input type="text" value={this.state.txt} onChange={(e) => this.setState({txt: e.target.value})} />
+                <input type="text" value={this.state.txt} onChange={(e) => this.setState({txt: e.target.value})} />
             </div>
         )
     }
