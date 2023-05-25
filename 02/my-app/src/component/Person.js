@@ -16,6 +16,9 @@ class Person extends React.Component {
                 <p>Name: {this.props.name}</p>
                 <p>Age: {this.props.age}</p>
                 <button onClick={() => this.props.sendMsg("来自子组件的message")}>send message to parent</button>
+                <p>start~~~~~~~~~~~~~~~~~~~</p>
+                { this.props.children }
+                <p>end~~~~~~~~~~~~~~~~~~~~~</p>
             </div>
         )
     }
