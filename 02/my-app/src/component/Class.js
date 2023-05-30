@@ -82,8 +82,8 @@ class ClassComponent extends React.Component {
                 <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
                 <input type="checkbox" checked={this.state.isCheck} onChange={(e) => this.setState({isCheck: e.target.checked})} />
 
-                {/* 通过props传递数据给组件 */}
-                <Person name="Jack" age="22" sendMsg={(msg) => this.getMsgFromChild(msg)}>
+                {/* 通过props传递数据给组件, 父组件如果被重新渲染，那子组件也会被渲染*/}
+                <Person name="Jack" age="22" city = {this.state.city} sendMsg={(msg) => this.getMsgFromChild(msg)}>
                     <p>这是children的内容***********</p>
                 </Person>
 

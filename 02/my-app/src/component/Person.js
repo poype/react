@@ -19,6 +19,15 @@ class Person extends React.Component {
         console.log(button)
     }
 
+    // 有三种方法会导致组件update
+    // 父组件被重新渲染，父组件的render方法被调用
+    // setState
+    // 组件的forceUpdate方法被调用
+    componentDidUpdate() {
+        // 组件首次挂载不会被调用，当组件被更新时，会跟着render方法后面被调用
+        console.log("Person componentDidUpdate被调用");
+    }
+
     render() {
         console.log("Person render被调用");
         return (
