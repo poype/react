@@ -8,6 +8,8 @@ import FuncComponent from './component/Func'
 // 导入类组件
 import ClassComponent from './component/Class'
 
+import Test1 from './component/Test1'
+
 const title = React.createElement('h1', null, 'Hello React脚手架!!!')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -86,6 +88,8 @@ const page3 = (
         <FuncComponent></FuncComponent>
         {/* 使用类组件 */}
         <ClassComponent></ClassComponent>
+
+        <Test1></Test1>
     </div>
 )
 
