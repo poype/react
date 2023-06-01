@@ -95,18 +95,26 @@ const page3 = (
     </div>
 )
 
+// 所有路由，就是根据url的变化，将相应的Component渲染到指定好的位置。
+// 这个位置就是Route标签所在的位置，
 const page4 = (
+    // BrowserRouter包含整个应用
     <BrowserRouter>
         <div>
             <h1>React路由</h1>
 
             <Link to="/first">页面一</Link>
 
+            <p>Before</p>
+            
+            {/* Route组件会把内容渲染到它所在的位置 */}
             <Routes>
                 <Route path="/first" Component={Test1}/>
                 <Route path="/second" Component={ClassComponent}/>
                 <Route path="/third" Component={FuncComponent}/>
             </Routes>
+
+            <p>After</p>
         </div>
     </BrowserRouter>
 )
