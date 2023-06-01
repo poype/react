@@ -10,6 +10,8 @@ import ClassComponent from './component/Class'
 
 import Test1 from './component/Test1'
 
+import { BrowserRouter, Routes, Route, Link} from 'react-router-dom' 
+
 const title = React.createElement('h1', null, 'Hello React脚手架!!!')
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -93,4 +95,18 @@ const page3 = (
     </div>
 )
 
-root.render(page3);
+const page4 = (
+    <BrowserRouter>
+        <div>
+            <h1>React路由</h1>
+
+            <Link to="/first">页面一</Link>
+
+            <Routes>
+                <Route path="/first" Component={Test1}/>
+            </Routes>
+        </div>
+    </BrowserRouter>
+)
+
+root.render(page4);
