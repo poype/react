@@ -58,6 +58,8 @@ class Test1 extends React.Component {
         console.log("同步打印state对象的值还是老的值 ", this.state);
     }
 
+    // render方法的调用并不意味着浏览器中的重新渲染
+    // render方法的调用仅仅说明要进行diff比对，如果比对出差异，才会执行浏览器中的渲染
     render() {
         console.log("Test1 render~~")
         return (
