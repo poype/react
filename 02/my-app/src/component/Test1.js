@@ -10,6 +10,19 @@ class Test1 extends React.Component {
         }
     }
 
+    // shouldComponentUpdate可以通过返回值决定是否执行渲染，返回true执行渲染，返回false不执行渲染
+    // 返回fasle只是不执行渲染，但state对象的值还是会被更新
+    shouldComponentUpdate(nextProps, nextState) {
+        // 在钩子函数内部可以获取到最新的state对象和当前的state对象，通过它们判断是否需要执行渲染
+        console.log("最新的state: ", nextState)
+        console.log("当前的state: ", this.state)
+        
+        if(nextState.count % 2 == 0) {
+            return true
+        }
+        return false
+    }
+
     handleClick() {
         this.setState({
             count: this.state.count + 1
