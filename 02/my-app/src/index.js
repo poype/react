@@ -104,6 +104,8 @@ const page4 = (
 
             <Routes>
                 <Route path="/first" Component={Test1}/>
+                <Route path="/second" Component={ClassComponent}/>
+                <Route path="/third" Component={FuncComponent}/>
             </Routes>
         </div>
     </BrowserRouter>
