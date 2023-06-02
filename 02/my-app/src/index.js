@@ -97,6 +97,10 @@ const page3 = (
 
 // 所有路由，就是根据url的变化，将相应的Component渲染到指定好的位置。
 // 这个位置就是Route标签所在的位置，
+// React路由监听地址栏url的变化
+// React路由内部遍历所有的Route组件，使用路由规则(path)与url进行匹配
+// 当路由规则(path)能够匹配地址栏中的url时，就展示该Route组件的内容
+// 只有第一个满足匹配规则的Route组件会生效
 const page4 = (
     // BrowserRouter包含整个应用
     <BrowserRouter>
@@ -106,7 +110,7 @@ const page4 = (
             <Link to="/first">页面一</Link>
 
             <p>Before</p>
-            
+
             {/* Route组件会把内容渲染到它所在的位置 */}
             <Routes>
                 <Route path="/first" Component={Test1}/>
